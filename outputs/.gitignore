@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.env/
+
+# Dataset
+data/raw/
+data/processed/
+
+# Model weights
+*.pth
+*.h5
+
+# Results
+results/saved_models/
+
+# Mac/Linux
+.DS_Store
