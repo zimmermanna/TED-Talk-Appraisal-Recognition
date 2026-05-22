@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="360d45f4-16a9-4e4c-b92e-79a44b20f85c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/notebooks/experiment_01.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/outputs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/preprocessing/loading.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visualization/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visualization/confusion_matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visualization/plots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/labels.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/labels.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/0_preprocessing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/evaluation/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/1_models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/1_models/baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/1_models/mil.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/mil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/2_training/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/2_training/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/aggregating.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/2_training/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/filtering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/3_evaluation/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/prepare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/4_visualization/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/4_visualization/confusion_matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/evaluate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/4_visualization/plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/training/train.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "sapiotoni"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/zimmermanna/TED-Talk-Appraisal-Recognition",
+    "accountId": "072e1ea8-9683-4bac-bf15-60cbd9566402"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3DykYhYnPU3IQnEItl6ljQhJCLu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/night/TED-Talk-Appraisal-Recognition/outputs/figures/distribution",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\night\TED-Talk-Appraisal-Recognition\data\raw\openface" />
+      <recent name="C:\Users\night\TED-Talk-Appraisal-Recognition\thesis\figures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\night\TED-Talk-Appraisal-Recognition\outputs\figures\AU_pre_normalizing" />
+      <recent name="C:\Users\night\TED-Talk-Appraisal-Recognition\notebooks" />
+      <recent name="C:\Users\night\TED-Talk-Appraisal-Recognition" />
+      <recent name="C:\Users\night\TED-Talk-Appraisal-Recognition\outputs\figures" />
+      <recent name="C:\Users\night\TED-Talk-Appraisal-Recognition\thesis\tables" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.102" />
+        <option value="bundled-python-sdk-5e1850174b45-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="360d45f4-16a9-4e4c-b92e-79a44b20f85c" name="Changes" comment="" />
+      <created>1732961980750</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732961980750</updated>
+      <workItem from="1732961982178" duration="268000" />
+      <workItem from="1779261746707" duration="37887000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

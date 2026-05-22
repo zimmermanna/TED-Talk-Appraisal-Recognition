@@ -1,10 +1,8 @@
 # Visual Appraisal Recognition in TED Talks Using Facial Expressions
 
-> Short one-sentence description of your project.
-
 ## Overview
 
-This project investigates wheteher facial expression features can predict the 
+> This project investigates wheteher facial expression features can predict the 
 presence of linguistic appraisal in public speaking scenarios using deep learning 
 methods. 
 
