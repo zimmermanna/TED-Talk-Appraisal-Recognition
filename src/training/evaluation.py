@@ -21,6 +21,14 @@ def evaluate_one_epoch(model, data_loader, device, criterion, config):
 
             logits, attention_weights = model(X, mask)
 
+            # Calculating Contribution
+            H = model.encoder(X)
+            classifier_weight = model.classifier.weight.squeeze(0)
+
+            window_evidence = H @ classifier_weight
+            window_contributions = attention_weights * window_evidence
+
+            # Continue
             loss = criterion(logits, y)
             total_loss += loss.item() * X.size(0)
 
@@ -39,6 +47,8 @@ def evaluate_one_epoch(model, data_loader, device, criterion, config):
 
                 x_i = X[i, :valid_len]
                 att_i = attention_weights[i, :valid_len]
+                evidence_i = window_evidence[i, :valid_len]
+                contribution_i = window_contributions[i, :valid_len]
 
                 attention_results.append({
                     "clip_id": batch_clip_ids[i],
@@ -46,6 +56,8 @@ def evaluate_one_epoch(model, data_loader, device, criterion, config):
                     "pred_prob": float(probs[i].item()),
                     "pred_label": int(preds[i].item()),
                     "attention": att_i.cpu().numpy(),
+                    "evidence": evidence_i,
+                    "contribution": contribution_i,
                     "X": x_i.cpu().numpy()
                 })
 
@@ -57,7 +69,7 @@ def evaluate_one_epoch(model, data_loader, device, criterion, config):
 
     return avg_loss, balanced_acc, all_y_true, all_y_pred, attention_results
 
-def full_test_evaluation_per_split(best_model_state, model, test_loader, test_source, criterion, device, config, single_signal=None, results=None):
+def full_test_evaluation_per_split(best_model_state, model, test_loader, test_source, criterion, device, config, single_signal=None, results=None, log=False):
     model.load_state_dict(best_model_state)
 
     test_avg_loss, test_bal_acc, test_all_y_true, test_all_y_pred, attention_results = evaluate_one_epoch(
@@ -74,9 +86,11 @@ def full_test_evaluation_per_split(best_model_state, model, test_loader, test_so
         output_dict=True,
         zero_division=0
     )
-    print(f"Bal. Accuracy: {test_bal_acc}")
-    print(f"Avg. Loss:  {test_avg_loss}")
-    print(confusion_matrix(test_all_y_true, test_all_y_pred, labels=[0, 1]))
+
+    if (log):
+        print(f"Bal. Accuracy: {test_bal_acc}")
+        print(f"Avg. Loss:  {test_avg_loss}")
+        print(confusion_matrix(test_all_y_true, test_all_y_pred, labels=[0, 1]))
 
     if not single_signal and results:
         results.append({

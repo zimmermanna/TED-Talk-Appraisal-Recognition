@@ -54,7 +54,7 @@ def attention_based_mil(df, au_cols, tensorboard=False):
         )
 
         model = AttentionMIL(
-            input_dim=len(au_cols)
+            input_dim=len(au_cols), dropout=LOCKED_CONFIG["dropout"]
         ).to(device)
 
         optimizer = torch.optim.Adam(

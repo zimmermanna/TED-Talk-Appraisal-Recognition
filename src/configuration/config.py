@@ -11,6 +11,7 @@ LOCKED_CONFIG = {
     "learning_rate": 0.003,
     "weight_decay": 0.001,
     "batch_size": 16,
+    "dropout": 0.2,
     "num_epochs": 25,
     "threshold": 0.5
 }

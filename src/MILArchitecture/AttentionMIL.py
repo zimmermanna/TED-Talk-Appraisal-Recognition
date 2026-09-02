@@ -1,10 +1,13 @@
 import torch
 import torch.nn as nn
+
+from src.configuration.config import LOCKED_CONFIG
+
 '''
 Input_Dim -> 9 Features
 '''
 class AttentionMIL(nn.Module):
-    def __init__(self, input_dim=8,hidden_dim=64, attention_dim=32, dropout=0.2):
+    def __init__(self, input_dim=8,hidden_dim=64, attention_dim=32, dropout=LOCKED_CONFIG["dropout"]):
         super().__init__()
 
         self.encoder = nn.Sequential(
