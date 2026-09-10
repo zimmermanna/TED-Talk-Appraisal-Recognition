@@ -60,17 +60,17 @@ def LOSO_Logistic_Regression(df, au_cols):
         all_y_prob.extend(y_prob)
 
     # Printing Overview at the End
-    print(pd.DataFrame(source_results))
-    print(confusion_matrix(all_y_true, all_y_pred))
+    # print(pd.DataFrame(source_results))
+    # print(confusion_matrix(all_y_true, all_y_pred))
 
     return all_y_pred, all_y_true, all_y_prob
 
 def LogReg_single_signal(df):
     single_au_results = []
     for au in au_cols:
-        print("=" * 40)
-        print("ACTION UNIT: ", au)
-        print("=" * 40)
+        # print("=" * 40)
+        # print("ACTION UNIT: ", au)
+        # print("=" * 40)
 
         all_y_pred, all_y_true, all_y_prob = LOSO_Logistic_Regression(df, [au])
 
@@ -102,7 +102,7 @@ def LogReg_single_signal(df):
 
     return summary
 
-def LogReg_all_signals(df, results, aggregation="Simple", normalized=False):
+def LogReg_all_signals(df, results, aggregation="Simple"):
     if (aggregation == "Advanced"):
         all_y_pred, all_y_true, all_y_prob = LOSO_Logistic_Regression(df, au_cols_adv)
     else:
@@ -120,7 +120,6 @@ def LogReg_all_signals(df, results, aggregation="Simple", normalized=False):
 
     results.append({
         "Aggregation": aggregation,
-        "Normalized": normalized,
         "Accuracy (Balanced)": acc_bal,
         "Loss": overall_loss,
         "precision_0": cr["0"]["precision"],

@@ -107,3 +107,43 @@ def mil_collate_fn(batch):
     labels = torch.stack(labels)
 
     return padded_bags, labels, mask, clip_ids
+
+
+def top_windows(example, fps=30):
+    attention_weights = np.asarray(
+        example["attention"].iloc[0],
+        dtype=float
+    )
+
+    evidence = np.asarray(
+        example["evidence"].iloc[0],
+        dtype=float
+    )
+
+    contribution = np.asarray(
+        example["contribution"].iloc[0],
+        dtype=float
+    )
+
+    # Fünf höchste Attention-Werte
+    top_indices = np.argsort(attention_weights)[-5:][::-1]
+
+    window_size = 10
+    stride = 5
+
+    window_duration = window_size / fps
+    stride_duration = stride / fps
+
+    start_times = top_indices * stride_duration
+    end_times = start_times + window_duration
+
+    top_attention_windows = pd.DataFrame({
+        "window": top_indices + 1,
+        "start_time_seconds": start_times,
+        "end_time_seconds": end_times,
+        "attention_weight": attention_weights[top_indices],
+        "evidence": evidence[top_indices],
+        "contribution": contribution[top_indices]
+    })
+
+    return top_attention_windows
