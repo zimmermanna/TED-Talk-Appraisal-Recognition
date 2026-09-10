@@ -213,20 +213,6 @@ TED-Talk-Appraisal-Recognition/
 └── README.md
 ```
 
-### Important Source Modules
-
-| Module | Purpose |
-| --- | --- |
-| `src/preprocessing/` | Loading, cleaning and aggregating OpenFace data |
-| `src/AggregationBasedArchitecture/Logistic_Regression.py` | LOSO Logistic Regression experiments |
-| `src/MILArchitecture/AttentionMIL.py` | Attention-based MIL model |
-| `src/MILArchitecture/windows.py` | Temporal window generation, bag creation, padding and masking |
-| `src/MILArchitecture/full_pipelines.py` | Complete MIL evaluation pipelines |
-| `src/configuration/config.py` | Reproducibility settings and locked hyperparameters |
-| `src/configuration/hyperparameter_search.py` | MIL hyperparameter experiments |
-| `src/training/` | Data loaders, training and evaluation |
-| `src/visualization/` | Confusion matrices and attention visualizations |
-
 ## Notebooks and Suggested Workflow
 
 The notebooks are numbered according to the main experimental workflow.
